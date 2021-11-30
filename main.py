@@ -21,13 +21,13 @@ def display_text(stdscr, target, current, wpm=0):
             # Shows red color if the text entered is wrong
 			color = curses.color_pair(2)
 
-		stdscr.addstr(0, i, char, color)
+		stdscr.addstr(1, i, char, color)
 
 def load_sentence():
 	with open("words.txt", "r") as sentences:
 		lines = sentences.readlines()
         
-        # randomely select a sentence for the user to type   
+        # randomly select a sentence for the user to type   
 		return random.choice(lines).strip()
 
 def wpm_test(stdscr):
